@@ -1,0 +1,15 @@
+#include<studio.h>
+int array[100],postion,c,n;
+void create()
+{
+printf("\n Enter number of elements in an array : \n");
+scanf("%d",&n);
+printf("\n Enter %d elements \n",n);
+scanf("%d ",&array[c]);
+}
+void display()
+{
+printf("\n Elements of array are; \n");
+for(c=0;c<n;c++)
+printf("\n Element %d at %d position \n", array[c],c);
+}
