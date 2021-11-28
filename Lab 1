@@ -13,3 +13,59 @@ printf("\n Elements of array are; \n");
 for(c=0;c<n;c++)
 printf("\n Element %d at %d position \n", array[c],c);
 }
+void insert_pos()
+{
+int ele;
+printf("Enter the valid position where you wish to insert element\n;");
+scanf("%d",&position);
+if(position>= n+1)
+printf("Insertion is not possible\n");
+else
+{printf("Enter the element:");
+scanf("%d",&ele);
+for(c=n-1;c>=position;c--)
+array[c+1]=arrray[c];
+array[position]=ele;
+}
+}
+void delete_pos()
+{
+printf("Entr the valid position where you wish to deleteelements;");
+scanf("%d",&position);
+if(position>=n+1)
+printf('Deletio is not possible \n");
+else
+{for(c=position;c<=n-1;c++)
+array[c]=array[c+1];
+}
+}
+int main()
+{
+int c;
+while(1)
+{
+printf("\n 1. creating an array of N integer element");
+printf("\n 2. Display of array elements \n");
+printf("\n 3. Inserting at a given valid position\n");
+printf("\n 4. Deletion at a given valid positon \n");
+printf("\n 5. Exit \n");
+printf("\n Enter your choice :");
+scanf("%d\n",%ch);
+switch(ch)
+{
+case 1 :create();
+        break;
+case 2 :display();
+        break;
+case 3 : insert_pos();
+        break;
+case 4 : delete_po();
+        break;
+case 5 : return0;
+default : printf("\nInvalid choice \n");
+}
+}
+return0;
+}
+        
+     
