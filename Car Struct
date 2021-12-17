@@ -5,14 +5,14 @@ int Model;
 float price;
 };
 void main()
-{stuct Car c1;
+{ struct Car c1;
 printf("\n Enter Car name:");
 gets(c1.name);
-printf(\n Enter Model no.");
-scanf("%d",&c1.Model");
+printf("\n Enter Model no.");
+scanf("%d",&c1.Model );
 printf("\n Enter the price of the car in lakhs:");
 scanf("%f",&c1.price);
 printf("\n Car name is %s:",c1.name);
 printf("\n Car Model is %d ",c1.Model);
-printf("\n Car price is :%f lakhs,c1.price);
+printf("\n Car price is :%f lakhs",c1.price);
 }
