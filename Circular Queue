@@ -1,0 +1,59 @@
+#include<stdio.h>
+#define max 5
+int front ,rear;
+char q[max];
+void Enqueue(void);
+void Dequeue(void);
+void qdislay(void);
+void main()
+{
+int choice;
+front=rear=-1;
+while(1)
+{
+printf("\n Circular Queue Opration \n");
+printf("\n1. Insert ");
+printf("\n2. Delete ");
+printf("\n3. Display ");
+printf("\n4. Exit ");
+printf("\n Enter your choice :\n");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1 : Enqueue();
+        break;
+case 2 : Dequeue();
+        break;
+case 3:  qdisplay();
+        break;
+case 4 : return 0;
+default : printf("Invalid choice");
+        break;
+}
+}
+void Enqueue(void)
+{
+char x;
+if(front==0&&rear=max-1)||(front==rear+1))
+{
+printf("\n Queue is OVERFLOW \n");
+return;
+}
+if(front==-1)
+{
+front=rear=0;
+}
+else
+{
+if(rear==max-1)
+       {
+       rear=0;
+       }
+       else
+       {
+       rear++;
+       }
+}
+
+        
+
