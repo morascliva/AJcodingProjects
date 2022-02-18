@@ -75,7 +75,7 @@ void towers(int num,char frompeg,char topeg,char auxpeg)
              {  printf("\n Move disk frompeg %c topeg %c \n",frompeg ,topeg);
                 return;
              }
-           tower (num-1,frompeg,auxpeg,topeg)
+           tower (num-1,frompeg,auxpeg,topeg);
            printf("\n Move disks %d frompeg %c topeg %c,num,frompeg,topeg);
            tower(num-1,auxpeg,topeg,frompeg);
            }
