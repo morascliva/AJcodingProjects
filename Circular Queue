@@ -54,6 +54,47 @@ if(rear==max-1)
        rear++;
        }
 }
-
+printf("Enter the character :\n");
+fflush(stdin);
+scanf("%c",&x);
+q[rear]=x;
+printf("\n%c succ.inserted \n",x);
+return;
+}
+void dequeue(void)
+{ char y;
+  if(front == -1)
+  { printf("\n Queue is UNDERFLOW \n");
+    return;
+   }
+   y=q[front];
+   if(front==rear)
+   { front= rear=-1;
+   }
+   else
+   { if (front==max-1)
+       {front=0;
+       }
+       {
+       front++;
+       }
+   }
+ printf("%c succ.deleted\n ",y);
+ return;
+ }
+ void qdisplay(void)
+     {  int i,j;
+        if(front=rear==-1)
+          { printf(" q is Empty \n");
+            return;
+          }
+       printf("Elements are:\n");
+       for(i=front;i!=rear;i=(i+1)%max)
+          { printf("%c \n",q[i]);
+          }
+       printf("%c\n",q[rear]);
+       return;
+       }
+         
         
 
