@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<ctype.h>
+#include<math.h>
+#include<string.h>
+#include<stdlib.h>
+void towers(int,char,char,char)
+int i,top;
+float op1,op2,res;
+char symbol,postfix[20];
+float s[30];
+float value[20];
+float compute()
+{  switch(symbol())
+          { case '+' : return op1 + op2 ;
+            case '-' : return op1 - op2 ;
+            case '*' : return op1 * op2 ;
+            case '%' : return ((int)op1 % (int)op2);
+            case '/' : if(op2 == 0)
+                       {
+                         printf("Operation not possible ,dividing by 0 \n");
+                          exit(0);
+                        }
+                        return op1 /op2;
+            case '^' :return pow(op1,op2);
+          }
+}
+void main()
+{
+int choice,num;
+while(1)
+{ i=o;
+  prinf("\n STACK APPLICATION \");
+  printf("\n 1. Evaluation of Suffix expression \n");
+  printf("\n 2. Solving Tower of Hanoi problem with n disks \n");
+  printf (" 3. Exit \n");
+  printf("Enter your choice :\n");
+  scanf("%d",&choice);
+  switch(choice)
+                {  case 1 : printf ("Enter the suffix expression \n");
+                            scanf ("%c",postfix);
+                top=-1;
+                while(postfix[i]!='\0')
+                      { if(isalpha(postfix[i])
+                             { printf("Enter the value for %c \n",postfix[i]);
+                               scanf("%f",&value[i]);
+                               }
+                         i++;
+                      }   
+                 for( i=0;<strlen(postfix[i];i++)
+                    { symbol=postfix[i];
+                      if(isalpha(postfix[i]))
+                       { s[++top]=value[i];
+                       }
+                       else
+                       { op2=s[top--];
+                         op1=s[top--];
+                         res=compute();
+                         s[++top}=res;
+                         }
+                      }
+                      printf("The value after solving postfix expression is %d\n,res)
+                      break;
+case 2 : printf( "Enter the number of disks:");
+         scanf("%d",&num);
+         printf("The sequence of moves involved in the Tower of hanoi are \n");
+         tower(num,'A','C','B');
+         break;
+case 3 : return ;
+default :printf("\n Enter a valid choice \n");
+}
+}
+}
+
+                           
