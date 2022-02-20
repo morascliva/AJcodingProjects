@@ -7,13 +7,14 @@ int main()
 int loc ;
 char st[25],pat[25],rep[25],t[25],d[25];
 int i,j,l,l1=0,k=0;
+int ls=0,lp=0,lr=0;
 printf("\n Enter main string :");
 scanf("%s",str);
 printf("\n Enter pattern string :");
 scanf("%s",pat);
 printf("\n Enter replace string :");
 scanf(%s",rep);
-if(search (str,pat)==1)
+if(search (str,pat)== -1)
 printf("\n pattern not found!!!\n ");
 else
 {
@@ -25,7 +26,7 @@ for(i=0;rep[i]='\0';i++)
 lr++;
 for(i=0;i<ls;i++)
 {
-for(j=0;j<ls;j++)
+for(j=0;j<lp;j++)
 i[j]=str[i+j];
 t[j]='\0';
 if(compare(t,pat)==0)
@@ -47,8 +48,9 @@ l1++;
 d[l1]='\0';
 printf("The number of strings=%d \n",k);
 printf("Original string=%s \n",str);
-printf("\n Pattern string =%s \n",rep);
-prinf("\n string after replacement=5s \n",d);
+printf("\n Pattern string =%s \n",pat);
+printf("\n replace string = %s \n ",rep)
+prinf("\n string after replacement=%s \n",d);
 }
 }
 int compare (char str1[25],char str2[25])
