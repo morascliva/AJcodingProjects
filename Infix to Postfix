@@ -30,26 +30,26 @@ int G(char symbol)
             case '/' :return 3;
             case '^':
             case '$':return 6;
-            case ')':reteun 0;
+            case ')':return 0;
             case '(' :return 9;
             default :return 7;
         }
 }     
 void infix_postfix(char in[],char po[])
 {   
-      int i,j,top-1;
+      int i,j,top=-1;
       char s[40],symbol;
-      [++top]='#';
+      s[++top]='#';
       j=0;
       for(i=0;i<strlen(in);i++)
          {  
               symbol =in[i];
-              while(F(s[top])>G(symbol())
+              while(F(s[top])>G(symbol))
                     {
                        po[j]=s[top--];
                        j++;
                      }
-         if(F(s[top])!=G(symbol())
+         if(F(s[top])!=G(symbol))
          s[++top]=symbol;
          else
          top--;
@@ -58,7 +58,7 @@ void infix_postfix(char in[],char po[])
         {
            po[j++]=s[top--];
          }
-         po[j]='\0'
+         po[j]='\0';
 }  
 void main()
 {  
@@ -75,7 +75,7 @@ void main()
     }
  if(c==0)
  { 
-    infix_postfix(infix,postfix)
+    infix_postfix(infix,postfix);
     printf("postfix foran infix expression is \n");
     printf("%s\n",postfix);
   }
