@@ -2,9 +2,9 @@
 #define max 5
 int front ,rear;
 char q[max];
-void Enqueue(void);
-void Dequeue(void);
-void qdislay(void);
+void enqueue(void);
+void dequeue(void);
+void qdisplay(void);
 void main()
 {
 int choice;
@@ -20,21 +20,22 @@ printf("\n Enter your choice :\n");
 scanf("%d",&choice);
 switch(choice)
 {
-case 1 : Enqueue();
+case 1 : enqueue();
         break;
-case 2 : Dequeue();
+case 2 : dequeue();
         break;
 case 3:  qdisplay();
         break;
-case 4 : return 0;
+case 4 : return ;
 default : printf("Invalid choice");
         break;
 }
 }
-void Enqueue(void)
+}
+void enqueue(void)
 {
 char x;
-if(front==0&&rear=max-1)||(front==rear+1))
+if((front==0&&rear==max-1)||(front==rear+1))
 {
 printf("\n Queue is OVERFLOW \n");
 return;
