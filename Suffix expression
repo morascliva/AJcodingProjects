@@ -29,7 +29,7 @@ void main()
 int choice,num;
 while(1)
 { i=0;
-  printf("\n STACK APPLICATION \");
+  printf("\n STACK APPLICATION \n");
   printf("\n 1. Evaluation of Suffix expression \n");
   printf("\n 2. Solving Tower of Hanoi problem with n disks \n");
   printf (" 3. Exit \n");
@@ -37,7 +37,7 @@ while(1)
   scanf("%d",&choice);
   switch(choice)
                 {  case 1 : printf ("Enter the suffix expression \n");
-                            scanf ("%c",postfix);
+                            scanf ("%d",postfix);
                 top=-1;
                 while(postfix[i]!='\0')
                       { if(isalpha(postfix[i]))
@@ -58,7 +58,7 @@ while(1)
                          s[++top]=res;
                          }
                       }
-                      printf("The value after solving postfix expression is %f\n,res);
+                      printf("The value after solving postfix expression is %f\n",res);
                       break;
 case 2 : printf( "Enter the number of disks:");
          scanf("%d",&num);
@@ -75,8 +75,8 @@ void towers(int num,char frompeg,char topeg,char auxpeg)
              {  printf("\n Move disk 1 frompeg %c topeg %c \n",frompeg ,topeg);
                 return;
              }
-           tower (num-1,frompeg,auxpeg,topeg);
-           printf("\n Move disks %d frompeg %c topeg %c,num,frompeg,topeg);
-           tower(num-1,auxpeg,topeg,frompeg);
+           towers(num-1,frompeg,auxpeg,topeg);
+           printf("\n Move disks %d frompeg %c topeg %c",num,frompeg,topeg);
+           towers(num-1,auxpeg,topeg,frompeg);
            }
                            
