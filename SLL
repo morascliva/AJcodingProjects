@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{   char usn[20],name[20],branch[5],phno[12];
+    int sem;
+    struct node*link;
+};
+typedef structnode*NODE
+NODE temp ,FIRST=NULL;
+NODE getnode()
+{    
+     NODE x;
+     x=(NODE)malloc(size of (struct node));
+     return x;
+}
+void read()
+{temp =getnode();
+temp->link=NULL;
+printf("Enter USN:");
+scanf("%s",temp->usn);
+printf("Enter Name :");
+scanf("%s",temp->name);
+printf("Enter Branch :");
+scanf("%s",temp->branch);
+printf("Enter Phno");
+scanf("%s",temp->phno);
+printf("Enter Sem :");
+scanf("%d",&temp->sum);
+}void creat_SLL()
+{
