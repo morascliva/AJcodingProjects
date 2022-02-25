@@ -52,5 +52,57 @@ else
  else
  { while(temp ->link!=NULL)
     { count ++;
-      printf ("%s\t%s\t%s\t%s\t%d\n",
+      printf ("%s\t%s\t%s\t%s\t%d\n",temp->usn,temp->name,temp->branch,temp->phno,temp->sem);
+      temp=temp->link;
+      }
+      printf("%s\t%s\t%s\t%s\t%d\",temo->usn,temp->name,temp->branch,temp->phno,temp->sem");
+      printf("\n Student count %d \n,count);
+      }
+      return;
+      }
+      void insertfront()
+      {
+         printf("Enter the details of the students \n");
+         read();
+         if(FIRST == NULL)
+         FIRST =temp;
+         else
+         {   temp->link=FIRST;
+              FIRST =temp;
+          }
+          }
+      NODE Insertionend(NODE FIRST)
+      { NODE last =FIRST;
+        printf ("Enter the details of the new student \n ");
+        read();
+        if(last!=NULL)
+        {   while(last->link!=NULL)
+             {      last = last ->link;
+             }
+             last ->link=temp;
+             }
+             else
+             {
+                FIRST = temp;
+             }
+             return FIRST ;
+             }
+  void Deletionfront()
+  { temp=FIRST;
+    if( FIRST =NULL)
+      { printf("List is empty \n");
+      }
+      else 
+      {    printf("deleted elements is %s \n ",temp->usn);
+           FIRST =temp->link;
+           free(temp);
+       }
+       return;
+   }
+   void Deletionend()
+   {
+   
+      
+             
+            
  
