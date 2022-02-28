@@ -102,6 +102,82 @@ struct node
           FIRST =temp;
           END= TEMP;
         } 
+       else
+       {
+       END->rlink=temp;
+       temp->llink=END;
+       END=temp;
+       }
+       return;
+       }
+       void deletion front()
+       {
+       temp=FIRST;
+       if(FIRST==NULL)
+       {printf("list is empty \n");
+       }
+       else if (FIRST == END)
+       {
+       printf("deleted element is %s \n ,temp->usn);
+       FIRST =NULL;
+       END = NULL;
+       free(temp);
+       }
+       else 
+       {printf("deleted element is %s \n",temp->usn);
+       FIRST =FIRST->rlink;
+       FIRST ->llink=NULL;
+       free(temp)
+       }
+       return;
+       }
+       void deletionend()
+       {
+       temp=END;
+       if(FIRST == NULL)
+       { printf ("List is empty \n ");
+       }
+       else if (FIRST == END)
+       { printf("Deleted element is %s  \n",temp->usn);
+         FIRST =NULL;
+         END  = NULL;
+         free(temp);
+       }
+       return;
+       }
+       void main()
+       {   int choice 
+           while(1)
+           {  printf("----------------------------MENU---------------------------\n");
+              printf("1. Create DLL of N Employees \n");
+              printf(" 2. Display SLL \n");
+              printf(" 3. Insertion at front \n");
+              printf(" 4. Insertion at end \n");
+              printf( 5. Deletion at front \n");
+              printf(" 6. Deletion at end \n ");
+              printf(" 7. Exit \n");
+              printf("--------------------------------------------------------------\n");
+              printf("Enter your choice ");
+              scanf("%d",&choice)
+              {          case 1 :create_DLL();
+                         break;
+                         case 2 :display_count();
+                         break;
+                         case 3 :Insertion front();
+                         break;
+                         case 4 :Insertionend();
+                         break;
+                         case 5 :Deletionfront();
+                         break;
+                         case 6 : Deletion end ();
+                         break;
+                         case 7 :return ;
+                         default : printf("Invalid choice \n ");
+              }
+       }
+   }
+              
+       
         
      
      
