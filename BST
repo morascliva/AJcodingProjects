@@ -37,3 +37,32 @@ NODE Insert(int item,NODE root)
  }
  void pre(NODE PRE)
       {  if(PRE!=NULL)
+            {printf("%d\t",PRE->info);
+             pre(PRE ->llink;);
+             pre(PRE->rlink);
+             }
+    }
+  void in(NODE IN)
+  { if(IN!=NULL)
+      {  in(IN ->llink);
+         printf("%d\t", IN->info);
+         in(IN ->rlink);
+      }
+ }
+ void post ( NODE POST)
+ {   if(POST!=NULL)
+        { post(POST->llink);
+          post(POST->rlink);
+          printf("%d\t",POST->info);
+          }
+ }
+ void Traversal(NODE root)
+ {   NODE IN,PRE,POST;
+     IN= root;
+     PRE= root;
+     POST =root;
+     if(root ==NULL)
+     {  printf("tree is empty \n");
+     return;
+     }
+     
