@@ -65,4 +65,51 @@ NODE Insert(int item,NODE root)
      {  printf("tree is empty \n");
      return;
      }
+     cur=root;
+     while(cur!=NULL)
+     {  if(item==cur->info)
+           { i++;
+            printf("Found key %d in tree \n",cur->info);
+            }
+            if(item<cur->info)
+            cur=cur->llink;
+            else
+            cur=cur->rlink;
+            }
+        if(i==0)
+        printf("Key not found \n");
+        return root;
+    }
+    void main()
+    {int choice,item,n;
+    NODE root=NULL;
+    while(1)
+    { printf("\n-------------MENU-------------------\n);
+      printf("\n 1.Create BST of N integers \n ");
+      printf("\n 2.Taversal \n");
+      printf("\n 3.Search \n");
+      printf("\n 4.Exit");
+      printf("\n Enter your choice ");
+      scanf("%d',&choice);
+      switch(choice)
+      {  case 1: printf("\n enter the number of elements ");
+                 scanf("%d",&n);
+                 while(n>0)
+                 { printf("Enter the item to be inserted \n ");
+                   scanf("%d",&item);
+                   root=insert(item,root);
+                   n--;
+                   }
+                   break;
+        case 2 :Traversal(root);
+                break;
+        case 3: search(root);
+                break;
+        case4 : return ;
+        default:printf("\n Invalid choice \n ");
+        }
+     }
+  }   
+        
      
+   
