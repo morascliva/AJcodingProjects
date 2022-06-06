@@ -1,0 +1,20 @@
+#include<stdio.h>
+typdef struct
+{ float real,float imag;
+}COMPLEX;
+COMPLEX add(COMPLEX n1,COMPLEX n2);
+main()
+    { COMPLEX n1,n2,temp;
+      printf("Enter real and imaginary part of first complex no:\n");
+      scanf("%f%f",&n1.real,n1.imag);
+      printf("enter real and imaginary part of second complex no:");
+      scanf("%f%f",&n2.real,&n2.imag);
+      temp=add(n1,n2);
+      printf("Sum=%f+i*%f",temp.real,temp.imag);
+      }
+      COMPLEX add(COMPLEX n1,COMPLEX n2)
+      { COMPLEX temp;
+       temp.real=n1.real+n2.real;
+       temp.imag=n1.imag+n2.imag;
+       return(temp);
+       }
