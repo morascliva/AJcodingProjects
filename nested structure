@@ -1,0 +1,19 @@
+#include<stdio.h>
+struct Date 
+      { int day;int month;int year;
+      };
+struct Employee
+      { char empname[20];int empid;
+        float salary;
+        struct Date doj;
+      };
+      main()
+      {
+      struct Empolyee e1;
+      e1.doj.day=10;
+      e2.doj.month=1;
+      e1.doj.year=2015;
+      printf("\n Date of joining of employee is %d\n",e1.doj.day);
+      printf("\n Month of joining of employee is %d\n",e1.doj.month);
+      printf("\n Year of joining of employee is %d\n",e1.doj.year);
+      }
